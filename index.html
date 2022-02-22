@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle</title>
+</head>
+
+<body>
+    <div class="nav_bar" id="menu">
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Article</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Log Out</a></li>
+            <li id="close">&times;</li>
+        </ul>
+    </div>
+    <div class="toogle" id="open">&#9776; MENU</div>
+
+    <script>
+        let menu = document.getElementById("menu");
+        let open = document.getElementById("open");
+        open.addEventListener("click", function Open() {
+            menu.style.width = "300px";
+            open.style.marginLeft = "250px";
+            open.innerHTML = "&#10162	Click on Cross Element";
+        })
+
+        document.getElementById("close").addEventListener("click", function Close() {
+            menu.style.width = "0";
+            open.style.marginLeft = "0";
+            open.innerHTML = "&#9776; MENU";
+        })
+    </script>
+</body>
+
+</html>
